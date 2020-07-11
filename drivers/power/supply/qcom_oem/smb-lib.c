@@ -4899,7 +4899,9 @@ static void set_usb_switch(struct smb_charger *chg, bool enable)
 
 static void switch_fast_chg(struct smb_charger *chg)
 {
-	bool fastchg_allowed, is_allowed;
+	return;
+	
+	/*bool fastchg_allowed, is_allowed;
 	static bool pre_fastchg_allowed, pre_is_allowed;
 
 	mutex_lock(&chg->sw_dash_lock);
@@ -4928,7 +4930,7 @@ static void switch_fast_chg(struct smb_charger *chg)
 			op_set_fast_chg_allow(chg, true);
 		}
 	}
-	mutex_unlock(&chg->sw_dash_lock);
+	mutex_unlock(&chg->sw_dash_lock);*/
 }
 
 static void op_re_kick_allowed_voltage(struct smb_charger  *chg)
