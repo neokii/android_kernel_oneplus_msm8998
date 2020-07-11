@@ -4800,7 +4800,7 @@ bool op_set_fast_chg_allow(struct smb_charger *chg, bool enable)
 	return false;
 }
 
-static bool op_get_fast_chg_allow(struct smb_charger *chg)
+/*static bool op_get_fast_chg_allow(struct smb_charger *chg)
 {
 	if (fast_charger && fast_charger->get_fast_chg_allow)
 		return fast_charger->get_fast_chg_allow();
@@ -4808,7 +4808,7 @@ static bool op_get_fast_chg_allow(struct smb_charger *chg)
 		pr_err("no fast_charger register found\n");
 
 	return false;
-}
+}*/
 
 static bool op_is_usb_switch_on(struct smb_charger *chg)
 {
@@ -4899,9 +4899,7 @@ static void set_usb_switch(struct smb_charger *chg, bool enable)
 
 static void switch_fast_chg(struct smb_charger *chg)
 {
-	return;
-	
-	bool fastchg_allowed, is_allowed;
+	/*bool fastchg_allowed, is_allowed;
 	static bool pre_fastchg_allowed, pre_is_allowed;
 
 	mutex_lock(&chg->sw_dash_lock);
@@ -4930,7 +4928,7 @@ static void switch_fast_chg(struct smb_charger *chg)
 			op_set_fast_chg_allow(chg, true);
 		}
 	}
-	mutex_unlock(&chg->sw_dash_lock);
+	mutex_unlock(&chg->sw_dash_lock);*/
 }
 
 static void op_re_kick_allowed_voltage(struct smb_charger  *chg)
